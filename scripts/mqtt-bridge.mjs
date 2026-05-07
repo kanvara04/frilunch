@@ -1,4 +1,5 @@
-import 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
 import mqtt from 'mqtt';
 import { InfluxDB, Point } from '@influxdata/influxdb-client';
 
