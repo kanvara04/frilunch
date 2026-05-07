@@ -162,27 +162,6 @@ vercel --prod
 
 ---
 
-## 🏗️ Architecture (สำหรับสไลด์อาจารย์)
-
-```
-[ESP32 (Wokwi) + DS18B20]          ← Device Layer
-         │ Wi-Fi + MQTT publish (TLS:8883)
-         ▼
-[HiveMQ Cloud]                      ← Broker (managed)
-         │ MQTT subscribe
-         ▼
-[Node.js MQTT Bridge]               ← Backend (Bridge)
-         │ HTTPS write
-         ▼
-[InfluxDB Cloud]                    ← Database (Time-Series)
-         │ Flux query
-         ▼
-[Next.js API Route]                 ← Backend (REST)
-         │ HTTP poll (5s)
-         ▼
-[Next.js Dashboard]                 ← Frontend
-   (Real-time chart + Bell + Toast + History Table)
-```
 
 **Layer mapping ตาม CS423 rubric:**
 | Layer | สิ่งที่ใช้ |
@@ -212,9 +191,3 @@ vercel --prod
 
 ---
 
-## 🔒 Security note
-
-หลัง present ส่งงานเสร็จ:
-1. HiveMQ → เปลี่ยน password ของ user `kanvara`
-2. InfluxDB → revoke token เก่า + generate ใหม่
-3. อัปเดต `.env.local` + Vercel env + Railway env + sketch.ino
