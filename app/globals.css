@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.animate-badge-pulse {
+  animation: badge-pulse 1.6s ease-in-out infinite;
+}

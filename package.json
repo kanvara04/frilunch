@@ -1,0 +1,30 @@
+{
+  "name": "frilunch",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "mqtt-bridge": "node scripts/mqtt-bridge.mjs"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@influxdata/influxdb-client": "^1.35.0",
+    "mqtt": "^5.10.0",
+    "dotenv": "^16.4.5",
+    "lucide-react": "^1.14.0",
+    "recharts": "^2.13.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "postcss": "^8.4.0",
+    "typescript": "^5.7.0"
+  }
+}
